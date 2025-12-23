@@ -9,4 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
+articles/
 site/
+*.jpg
+*.jpeg
+*.png
+*.gif
