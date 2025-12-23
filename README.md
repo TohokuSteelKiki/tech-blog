@@ -1,6 +1,6 @@
 # Tech Blog
 
-個人の技術ブログサイトです。MkDocsを使用して静的サイトを生成し、GitHub Pagesでホスティングしています。
+機器開発チームの技術ブログサイトです。MkDocsを使用して静的サイトを生成し、GitHub Pagesでホスティングしています。
 
 ## セットアップ
 
@@ -82,3 +82,47 @@ tech_blog/
 2. ファイル名の推奨形式: `YYYY-MM-DD_タイトル.md`
 3. ローカルで確認: `mkdocs serve`
 4. デプロイ: `mkdocs gh-deploy --clean`
+
+## Git管理とワークフロー
+
+このリポジトリは**2つのブランチ**で管理されています：
+
+### mainブランチ（手動管理）
+- **内容**: Markdownソースファイル（`docs/`）、設定ファイル
+- **役割**: コンテンツの開発とバージョン管理
+- **操作**: 通常のGit操作でcommit & push
+
+### gh-pagesブランチ（自動管理）
+- **内容**: ビルドされたHTMLファイル（`site/`の内容）
+- **役割**: GitHub Pagesでの公開
+- **操作**: `mkdocs gh-deploy`が自動的に管理
+
+### 推奨ワークフロー
+
+```bash
+# 1. 記事を作成・編集
+# docs/articles/新しい記事.md を作成
+
+# 2. ローカルで確認
+mkdocs serve
+
+# 3. mainブランチにcommit & push（ソースファイルの管理）
+git add docs/articles/新しい記事.md
+git commit -m "新しい記事を追加"
+git push origin main
+
+# 4. GitHub Pagesにデプロイ（HTMLの生成と公開）
+mkdocs gh-deploy --clean
+```
+
+### ブランチの役割
+
+| ブランチ | 管理対象 | 操作方法 | 目的 |
+|---------|---------|---------|------|
+| `main` | Markdownソース | 手動commit/push | ソース管理・共同作業 |
+| `gh-pages` | ビルドHTML | `mkdocs gh-deploy` | Webサイト公開 |
+
+**重要**: 
+- `docs/`は**mainブランチで管理**（.gitignoreに入れない）
+- `site/`は**ビルド成果物**（.gitignoreに入れる、gh-pagesブランチで管理）
+- `mkdocs gh-deploy`を実行しても、mainブランチへの自動commitは行われないため、**手動でcommitが必要**
