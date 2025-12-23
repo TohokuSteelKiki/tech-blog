@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# 社内技術ブログ
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+最終更新: 2025-12-24 01:03
 
-## Commands
+記事数: 2件
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## 記事一覧
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [スケジュール活用：個人ワーク集中時間をつくる](articles/2025-12-23_スケジュール活用：個人ワーク集中時間をつくる.md) - `Tips` (2025-12-23)
+- [outlook：優先、その他表示の活用例](articles/2025-12-23_outlook：優先、その他表示の活用例.md) - タグなし (2025-12-23)

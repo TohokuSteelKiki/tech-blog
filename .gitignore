@@ -9,9 +9,11 @@ wheels/
 # Virtual environments
 .venv
 
-articles/
+# MkDocs build output
 site/
-*.jpg
-*.jpeg
-*.png
-*.gif
+
+# Images (if you want to exclude them)
+# docs/articles/images/*.jpg
+# docs/articles/images/*.jpeg
+# docs/articles/images/*.png
+# docs/articles/images/*.gif
